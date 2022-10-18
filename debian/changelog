@@ -1,0 +1,16 @@
+ruby-em-mongo (0.5.1-1.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 29 Dec 2020 04:11:13 +0100
+
+ruby-em-mongo (0.5.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #741484)
+ 
+  [Pirate Praveen]
+  * update debian/copyright, add license for missed files
+  * Correctly install VERSION and patch em-mogo.rb to find it
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Sat, 22 Mar 2014 17:51:27 +0100

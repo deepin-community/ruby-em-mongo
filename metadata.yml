@@ -1,0 +1,114 @@
+--- !ruby/object:Gem::Specification
+name: em-mongo
+version: !ruby/object:Gem::Version
+  version: 0.5.1
+platform: ruby
+authors:
+- bcg
+- PlasticLizard
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2010-12-01 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: eventmachine
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.12.10
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 0.12.10
+- !ruby/object:Gem::Dependency
+  name: bson
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.9.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.9.2
+description: EventMachine driver for MongoDB.
+email: brenden.grace@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files:
+- README.rdoc
+files:
+- ".gitignore"
+- CHANGELOG
+- Gemfile
+- README.rdoc
+- Rakefile
+- VERSION
+- em-mongo.gemspec
+- examples/legacy.rb
+- examples/readme.rb
+- lib/em-mongo.rb
+- lib/em-mongo/collection.rb
+- lib/em-mongo/connection.rb
+- lib/em-mongo/conversions.rb
+- lib/em-mongo/core_ext.rb
+- lib/em-mongo/cursor.rb
+- lib/em-mongo/database.rb
+- lib/em-mongo/exceptions.rb
+- lib/em-mongo/prev.rb
+- lib/em-mongo/request_response.rb
+- lib/em-mongo/server_response.rb
+- lib/em-mongo/support.rb
+- spec/gem/Gemfile
+- spec/gem/bundler.rb
+- spec/gem/rubygems.rb
+- spec/integration/collection_spec.rb
+- spec/integration/connection_spec.rb
+- spec/integration/cursor_spec.rb
+- spec/integration/database_spec.rb
+- spec/integration/request_response_spec.rb
+- spec/spec_helper.rb
+- spec/unit/bson_spec.rb
+homepage: https://github.com/bcg/em-mongo
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options:
+- "--charset=UTF-8"
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: em-mongo
+rubygems_version: 2.2.0
+signing_key: 
+specification_version: 4
+summary: An EventMachine driver for MongoDB.
+test_files:
+- spec/gem/Gemfile
+- spec/gem/bundler.rb
+- spec/gem/rubygems.rb
+- spec/integration/collection_spec.rb
+- spec/integration/connection_spec.rb
+- spec/integration/cursor_spec.rb
+- spec/integration/database_spec.rb
+- spec/integration/request_response_spec.rb
+- spec/spec_helper.rb
+- spec/unit/bson_spec.rb

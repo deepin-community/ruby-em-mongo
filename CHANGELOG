@@ -1,0 +1,123 @@
+- 0.5.1
+
+  * fixed bson dependency (do not use 2.x)
+  * fixed test running
+  * removed bash only expression from gemspec
+
+- 0.5.0
+
+ * debian packaging changes
+    (https://github.com/bcg/em-mongo/pull/53)
+ * added new 2d indexes EM::Mongo::FLAT2D, EM::Mongo::SPHERE2D
+    (https://github.com/bcg/em-mongo/pull/49)
+
+- 0.4.3
+
+ * ensure new buffers aren't created when not needed (FlockOfBirds) #40
+
+- 0.4.2
+
+ * defer_as_a instead to to_a
+ * bugger optimizations
+ * Jruby fixes
+
+- 0.4.1
+
+ * fix collection response value on success (pawelpacana)
+ * whitepsace (pawelpacana)
+
+- 0.4.0
+
+ * added a Cursor implementation
+ * replaced raw callbacks in the API with deferrables
+ * removed CRUD methods from the Connection
+ * added a variety of server side aggregation commands
+ * added support for indexes
+ * added safe update methods
+
+- 0.3.6
+
+ * dj2: fixes reconnects. (see: https://github.com/bcg/em-mongo/pull/23)
+
+- 0.3.5
+
+ * gvarela: added orderby functionality based on the mongo-ruby-driver.
+   (https://github.com/bcg/em-mongo/pull/19)
+
+- 0.3.4
+ 
+ * Silly regression issue. Added em requires to tests and so I missed it when
+   I yanked it from lib/em-mongo.rb
+ * dynamix found *another* regression in the new database code.
+   (see: https://github.com/bcg/em-mongo/pull/16)
+
+- 0.3.3
+ 
+ * Yank Bundler out lib/em-mongo.rb and push it into spec/spec_helper.rb
+ * Numerous Rakefile changes
+
+- 0.3.2
+
+ * Added spec/gem to help with release testing
+ * Added some Rakefile helpers
+
+- 0.3.1
+
+ * Added VERSION to the gem. It was breaking the new EM::Mongo::Version module.
+
+- 0.3
+
+ * Refactored test suite
+ * Followed ruby-mongo-driver's _id convention. This will BREAK your apps. 
+ See: http://twitter.com/#!/brendengrace/status/9445253316608000
+ * Split out database.rb and pulled in support.rb and conversons.rb from
+ ruby-mongo-driver
+ * Added initial authentication support to to EM::Mongo::Database
+
+- 0.2.14
+
+ * .close was reconnecting automatically so now its configureable
+
+- 0.2.12
+
+ * Use BSON::ObjectID for _id instead of String (gaffneyc).
+
+= 0.2.11
+
+ * Auto Reconnect on lost connection (dj2)
+ * Options handling on Em.connect (dj2)
+ * Bundler support (pkieltyka)
+
+= 0.2.10
+
+ * Ruby 1.8 was broken in the last set of patches pulled in.
+
+= 0.2.9
+ 
+ * Performance enhacements by merrells
+ * Cleanups by jarib
+
+= 0.2.7
+
+ * Fixes modifier issues in update. BSON would not allow '$' with key checks. (http://github.com/bcg/em-mongo/issues/3)
+
+= 0.2.6
+
+ * 'limit' was broken in find because of poor protocol parsing. (http://github.com/bcg/em-mongo/issues/1)
+
+= 0.2.5
+
+ * collection.update
+
+= 0.2.4
+
+ * Remove support for symbols, needs to be enforced still
+ * Remove lib/buffer.rb and all custom BSON parsing 
+ * Remove UUID dependency (replaced by BSON::ObjectID.new)
+ * Fixes a BufferOverflow because of misunderstood types
+
+= 0.1.1 - Initial Relase
+
+ * Rspec tests
+ * Fixes a BufferOverflow with large Hashes
+ * Fork of RMongo

@@ -1,0 +1,31 @@
+Source: ruby-em-mongo
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Jonas Genannt <jonas.genannt@capi2name.de>
+Build-Depends: debhelper (>= 7.0.50~),
+               gem2deb (>= 0.6.1~),
+               ruby-bson,
+               ruby-eventmachine,
+               ruby-rspec,
+               ruby-em-spec
+Standards-Version: 3.9.5
+Vcs-Git: git://anonscm.debian.org/pkg-ruby-extras/ruby-em-mongo.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-ruby-extras/ruby-em-mongo.git;a=summary
+Homepage: http://github.com/bcg/em-mongo
+XS-Ruby-Versions: all
+
+Package: ruby-em-mongo
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-bson,
+         ruby-eventmachine,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Suggests: mongodb-server
+Description: Ruby EventMachine driver for MongoDB
+ An EventMachine client for MongoDB. Originally based on RMongo, this client
+ aims to be as API compatible with ruby-mongo driver as possible.
+ For methods that do not retrieve data from the database the API of em-mongo
+ should be identical (though a subset) to the ruby-mongo driver.

@@ -1,0 +1,11 @@
+--- a/lib/em-mongo.rb
++++ b/lib/em-mongo.rb
+@@ -8,7 +8,7 @@
+ module EM::Mongo
+ 
+   module Version
+-    STRING = File.read(File.dirname(__FILE__) + '/../VERSION')
++    STRING = File.read(File.dirname(__FILE__) + '/em-mongo/VERSION')
+     MAJOR, MINOR, TINY = STRING.split('.')
+   end
+ 
